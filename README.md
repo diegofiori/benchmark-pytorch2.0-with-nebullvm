@@ -17,7 +17,7 @@ pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --e
 pip install nebullvm
 python -m nebullvm.installers.auto_installer --frameworks torch onnx --compilers all
 ```
-Now we are ready for running our benchmark.
+Note that pytorch must be installed before nebullvm. We suggest to use pytorch 1.12.1 since it is the one with the largest compatibility with nebullvm-supported compilers. Now we are ready for running our benchmark.
 You can simply run on the `pytorch_2_env`
 ```bash
 python main.py --batch_size 1 
