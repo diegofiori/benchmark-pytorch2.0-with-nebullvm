@@ -25,7 +25,7 @@ python main.py --batch_size 1
 for running the test on the torch2.0 compiler, with the selected batch size. Torch 2.0 can also be run in fp16 precision. You can test it adding the `--half` flag:
 ```bash
 python main.py --batch_size 1 --half
-
+```
 On the other hand, you can run on the `nebullvm_env`
 ```bash
 python main.py --batch_size 1 --nebullvm
