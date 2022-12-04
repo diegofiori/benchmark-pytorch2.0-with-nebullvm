@@ -17,12 +17,16 @@ pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --e
 pip install nebullvm
 python -m nebullvm.installers.auto_installer --frameworks torch onnx --compilers all
 ```
-Note that pytorch must be installed before nebullvm. We suggest to use pytorch 1.12.1 since it is the one with the largest compatibility with nebullvm-supported compilers. Now we are ready for running our benchmark.
+Note that pytorch must be installed before nebullvm. I suggest to use pytorch 1.12.1 since it is the one with the largest compatibility with nebullvm-supported compilers. Now we are ready for running our benchmark.
 You can simply run on the `pytorch_2_env`
 ```bash
 python main.py --batch_size 1 
 ```
-for running the test on the torch2.0 compiler, with the selected batch size. On the other hand, you can run on the `nebullvm_env`
+for running the test on the torch2.0 compiler, with the selected batch size. Torch 2.0 can also be run in fp16 precision. You can test it adding the `--half` flag:
+```bash
+python main.py --batch_size 1 --half
+
+On the other hand, you can run on the `nebullvm_env`
 ```bash
 python main.py --batch_size 1 --nebullvm
 ```
